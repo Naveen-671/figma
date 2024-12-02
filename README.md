@@ -1,5 +1,7 @@
 ![alt text](/public/Thumbnail.png)
 
+[https://youtu.be/43xmaSJbEVs](https://www.youtube.com/watch?v=43xmaSJbEVs)
+
 ## Overview
 
 Hi 🤙 In this FREE 11 hour video you'll learn how to build a real-time Figma clone. You'll build features like real-time canvas updates, collaborative tools, advanced shape and text editing, and much more. We'll be using modern technologies such as Next.js 15, React 18, TypeScript and Liveblocks. You'll be able to build along with me from project setup to Vercel deployment.
