@@ -40,6 +40,9 @@ Download and install Node.js if not already installed. Use the link below for gu
 npm install
 ```
 
+### Liveblocks
+Sign up for [Liveblocks](https://liveblocks.io/), and create a project. Grab the public and secret key for the project.
+
 ### Setup Environment Variables
 Create a `.env` file in the root of the project and add the necessary environment variables listed in `env.js`.
 
