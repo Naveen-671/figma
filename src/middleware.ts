@@ -1,14 +1,24 @@
-import { auth } from "./server/auth";
+import { NextRequest, NextResponse } from "next/server";
+import { getToken } from "next-auth/jwt";
 
-export default auth((req) => {
-  const isAuthenticated = !!req.auth;
+export async function middleware(req: NextRequest) {
+  const { pathname } = req.nextUrl;
 
-  if (!isAuthenticated) {
-    const newUrl = new URL("/signin", req.nextUrl.origin);
-    return Response.redirect(newUrl);
+  // Only protect /dashboard and its subroutes
+  const isProtectedRoute = pathname.startsWith("/dashboard");
+
+  if (isProtectedRoute) {
+    const token = await getToken({ req, secret: process.env.AUTH_SECRET });
+
+    if (!token) {
+      const signInUrl = new URL("/signin", req.nextUrl.origin);
+      return NextResponse.redirect(signInUrl);
+    }
   }
-});
+
+  return NextResponse.next();
+}
 
 export const config = {
-  matcher: ["/dashboard", "/dashboard/:path*"],
+  matcher: ["/((?!api|_next/static|_next/image|.*\\..*).*)"],
 };
