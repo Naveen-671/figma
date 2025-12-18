@@ -79,7 +79,15 @@ export const authConfig = {
     strategy: "jwt",
   },
   adapter: PrismaAdapter(db),
+  pages: {
+    signIn: "/signin",
+  },
   callbacks: {
+    authorized: () => {
+      // Return true to allow access to all routes
+      // Actual route protection is handled in middleware.ts
+      return true;
+    },
     session: ({ session, token }) => ({
       ...session,
       user: {
