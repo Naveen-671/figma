@@ -39,7 +39,7 @@
     "lucide-react": "^0.488.0",
     "motion": "^12.23.26",
     "nanoid": "^5.0.8",
-    "next": "^15.0.1",
+    "next": "15.0.7",
     "next-auth": "5.0.0-beta.25",
     "ogl": "^1.0.11",
     "perfect-freehand": "^1.2.2",
