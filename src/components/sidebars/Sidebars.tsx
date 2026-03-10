@@ -5,7 +5,7 @@ import Link from "next/link";
 import { AiOutlineFontSize } from "react-icons/ai";
 import { IoEllipseOutline, IoSquareOutline } from "react-icons/io5";
 import { PiPathLight, PiSidebarSimpleThin } from "react-icons/pi";
-import { Color, LayerType } from "~/types";
+import { type Color, LayerType } from "~/types";
 import { colorToCss, connectionIdToColor, hexToRgb } from "~/utils";
 import LayerButton from "./LayerButton";
 import NumberInput from "./NumberInput";
@@ -14,7 +14,7 @@ import { RiRoundedCorner } from "react-icons/ri";
 import ColorPicker from "./ColorPicker";
 import Dropdown from "./Dropdown";
 import UserAvatar from "./UserAvatar";
-import { User } from "@prisma/client";
+import type { User } from "@prisma/client";
 import ShareMenu from "./ShareMenu";
 
 export default function Sidebars({

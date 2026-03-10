@@ -1,4 +1,4 @@
-import { CanvasMode, CanvasState, LayerType } from "~/types";
+import { CanvasMode, type CanvasState, LayerType } from "~/types";
 import SelectionButton from "./SelectionButton";
 import ShapesSelectionButton from "./ShapesSelectionButton";
 import ZoomInButton from "./ZoomInButton";

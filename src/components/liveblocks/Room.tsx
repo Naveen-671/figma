@@ -1,13 +1,13 @@
 "use client";
 
-import { LiveList, LiveMap, LiveObject } from "@liveblocks/client";
+import { LiveList, LiveMap, type LiveObject } from "@liveblocks/client";
 import {
   ClientSideSuspense,
   LiveblocksProvider,
   RoomProvider,
 } from "@liveblocks/react";
-import { ReactNode } from "react";
-import { Layer } from "~/types";
+import type { ReactNode } from "react";
+import type { Layer } from "~/types";
 
 export function Room({
   children,

@@ -1,7 +1,5 @@
 import { useState, useRef, useEffect } from "react";
-import { BiPointer } from "react-icons/bi";
-import { RiHand } from "react-icons/ri";
-import { CanvasMode, CanvasState, LayerType } from "~/types";
+import { CanvasMode, type CanvasState, LayerType } from "~/types";
 import IconButton from "./IconButton";
 import { IoEllipseOutline, IoSquareOutline } from "react-icons/io5";
 
