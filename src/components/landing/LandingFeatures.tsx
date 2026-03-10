@@ -1,9 +1,10 @@
 "use client";
 
+import Link from "next/link";
 import { useState } from "react";
 import dynamic from "next/dynamic";
 import Image from "next/image";
-import { SiOpenai, SiNvidia, SiGoogle, SiMeta, SiAnthropic, SiDocker, SiNextdotjs } from "react-icons/si";
+import { SiOpenai, SiDocker, SiNextdotjs } from "react-icons/si";
 
 // Dynamically import heavy interactive components
 const CircularGallery = dynamic(() => import("./animations/CircularGallery"), { ssr: false });
@@ -12,7 +13,7 @@ const Stack = dynamic(() => import("./animations/Stack"), { ssr: false });
 const testimonials = [
     <div key="1" className="w-full h-full bg-black/80 p-8 rounded-3xl border border-white/10 flex flex-col justify-between relative overflow-hidden group backdrop-blur-sm">
         <Image src="/landing/img/abstract2.webp" alt="bg" fill className="opacity-30 object-cover absolute inset-0 -z-10 group-hover:scale-110 transition-transform duration-700" />
-        <p className="text-xl font-medium leading-relaxed relative z-10">"DevForge bridges the gap between design and development perfectly. It's the workflow engine I've been waiting for."</p>
+        <p className="text-xl font-medium leading-relaxed relative z-10">&ldquo;DevForge bridges the gap between design and development perfectly. It&rsquo;s the workflow engine I&rsquo;ve been waiting for.&rdquo;</p>
         <div className="flex items-center gap-4 relative z-10 mt-6">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
                 <Image src="/landing/img/person9.webp" alt="Alex" fill className="object-cover" />
@@ -25,7 +26,7 @@ const testimonials = [
     </div>,
     <div key="2" className="w-full h-full bg-black/80 p-8 rounded-3xl border border-white/10 flex flex-col justify-between relative overflow-hidden group backdrop-blur-sm">
         <Image src="/landing/img/abstract6.webp" alt="bg" fill className="opacity-30 object-cover absolute inset-0 -z-10 group-hover:scale-110 transition-transform duration-700" />
-        <p className="text-xl font-medium leading-relaxed relative z-10">"The AI generation is shockingly accurate. It saved our team days of boilerplate coding in just the first week."</p>
+        <p className="text-xl font-medium leading-relaxed relative z-10">&ldquo;The AI generation is shockingly accurate. It saved our team days of boilerplate coding in just the first week.&rdquo;</p>
         <div className="flex items-center gap-4 relative z-10 mt-6">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
                 <Image src="/landing/img/person10.webp" alt="Sarah" fill className="object-cover" />
@@ -38,7 +39,7 @@ const testimonials = [
     </div>,
     <div key="3" className="w-full h-full bg-black/80 p-8 rounded-3xl border border-white/10 flex flex-col justify-between relative overflow-hidden group backdrop-blur-sm">
         <Image src="/landing/img/abstract4.webp" alt="bg" fill className="opacity-30 object-cover absolute inset-0 -z-10 group-hover:scale-110 transition-transform duration-700" />
-        <p className="text-xl font-medium leading-relaxed relative z-10">"Finally, a tool that understands both Figma nuances and clean React code structure. A game changer."</p>
+        <p className="text-xl font-medium leading-relaxed relative z-10">&ldquo;Finally, a tool that understands both Figma nuances and clean React code structure. A game changer.&rdquo;</p>
         <div className="flex items-center gap-4 relative z-10 mt-6">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
                 <Image src="/landing/img/person11.webp" alt="Mike" fill className="object-cover" />
@@ -51,7 +52,7 @@ const testimonials = [
     </div>,
     <div key="4" className="w-full h-full bg-black/80 p-8 rounded-3xl border border-white/10 flex flex-col justify-between relative overflow-hidden group backdrop-blur-sm">
         <Image src="/landing/img/abstract9.webp" alt="bg" fill className="opacity-30 object-cover absolute inset-0 -z-10 group-hover:scale-110 transition-transform duration-700" />
-        <p className="text-xl font-medium leading-relaxed relative z-10">"The real-time collaboration via Liveblocks makes pair programming and design reviews seamless."</p>
+        <p className="text-xl font-medium leading-relaxed relative z-10">&ldquo;The real-time collaboration via Liveblocks makes pair programming and design reviews seamless.&rdquo;</p>
         <div className="flex items-center gap-4 relative z-10 mt-6">
             <div className="relative w-12 h-12 rounded-full overflow-hidden border-2 border-white/20">
                 <Image src="/landing/img/person103.webp" alt="Emily" fill className="object-cover" />
@@ -120,7 +121,7 @@ export default function LandingFeatures() {
                         textColor="#ffffff"
                         borderRadius={0.05}
                         scrollEase={0.05}
-                        onItemClick={(item: any) => setExpandedImage(item.image)}
+                        onItemClick={(item: { image: string; text: string }) => setExpandedImage(item.image)}
                     />
                 </div>
             </div>
@@ -148,7 +149,7 @@ export default function LandingFeatures() {
                                     canvas and Liveblocks presence. Create, share, and iterate on
                                     designs with your entire team simultaneously.
                                 </p>
-                                <a
+                                <Link
                                     href="/dashboard"
                                     className="link-fancy text-white inline-flex items-center gap-2"
                                 >
@@ -165,7 +166,7 @@ export default function LandingFeatures() {
                                             d="M1 8a7 7 0 1 0 14 0A7 7 0 0 0 1 8zm15 0A8 8 0 1 1 0 8a8 8 0 0 1 16 0zM4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5H4.5z"
                                         />
                                     </svg>
-                                </a>
+                                </Link>
                             </div>
                             <div className="pt-12 mt-12 border-t border-secondary">
                                 <h3 className="text-2xl font-semibold mb-3">
@@ -271,12 +272,12 @@ export default function LandingFeatures() {
                             <p className="text-xl text-secondary px-8 mb-8 max-w-xl mx-auto">
                                 DevForge is completely free and open source. Deploy locally, host it yourself, and build without limits.
                             </p>
-                            <a href="/dashboard" className="btn-xl bg-white text-black hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
+                            <Link href="/dashboard" className="btn-xl bg-white text-black hover:bg-gray-200 transition-colors inline-flex items-center gap-2">
                                 Get Started Free
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" viewBox="0 0 16 16">
                                     <path fillRule="evenodd" d="M1 8a.5.5 0 0 1 .5-.5h11.793l-3.147-3.146a.5.5 0 0 1 .708-.708l4 4a.5.5 0 0 1 0 .708l-4 4a.5.5 0 0 1-.708-.708L13.293 8.5H1.5A.5.5 0 0 1 1 8z" />
                                 </svg>
-                            </a>
+                            </Link>
                         </div>
                     </div>
                 </div>
@@ -377,10 +378,10 @@ export default function LandingFeatures() {
                                 Under the Hood
                             </span>
                             <h2 className="display-4 font-bold leading-tight mb-8">
-                                Built on the world's most advanced technologies.
+                                Built on the world&rsquo;s most advanced technologies.
                             </h2>
                             <p className="text-xl text-secondary mb-12 leading-relaxed">
-                                We've combined the power of generative AI with battle-tested collaborative tools to create a development environment that feels like the future.
+                                We&rsquo;ve combined the power of generative AI with battle-tested collaborative tools to create a development environment that feels like the future.
                             </p>
 
                             <div className="flex flex-wrap gap-4">
