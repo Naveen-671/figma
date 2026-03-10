@@ -42,7 +42,7 @@ export default function LandingHero() {
                         <p className="text-xl text-secondary leading-relaxed">
                             DevForge combines collaborative design tools with AI-powered code
                             generation. Create stunning interfaces with Figma-like canvas,
-                            then transform them into production-ready code using Vibe's
+                            then transform them into production-ready code using Vibe&rsquo;s
                             multi-model AI engine.
                         </p>
                     </div>

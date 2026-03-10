@@ -60,7 +60,7 @@ export const authConfig = {
           }
 
           return user;
-        } catch (error) {
+        } catch (_error) {
           return null;
         }
       },

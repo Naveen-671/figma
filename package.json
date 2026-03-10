@@ -26,7 +26,7 @@
     "@liveblocks/node": "^2.12.2",
     "@liveblocks/react": "^2.12.2",
     "@prisma/client": "^5.14.0",
-    "@react-three/fiber": "^9.4.2",
+    "@react-three/fiber": "^8.17.10",
     "@t3-oss/env-nextjs": "^0.10.1",
     "@types/aos": "^3.0.7",
     "@types/three": "^0.182.0",

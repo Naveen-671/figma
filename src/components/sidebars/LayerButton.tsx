@@ -1,7 +1,7 @@
 "use client";
 
 import { useMutation } from "@liveblocks/react";
-import { ReactNode } from "react";
+import type { ReactNode } from "react";
 
 const LayerButton = ({
   layerId,

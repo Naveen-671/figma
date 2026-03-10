@@ -1,5 +1,5 @@
 import { shallow, useSelf, useStorage } from "@liveblocks/react";
-import { Layer, XYWH } from "~/types";
+import type { Layer, XYWH } from "~/types";
 
 function boundingBox(layers: Layer[]): XYWH | null {
   const first = layers[0];

@@ -1,5 +1,5 @@
 import React from "react";
-import { ChangeEvent, ReactNode, useEffect, useState } from "react";
+import { useEffect, useState, type ChangeEvent, type ReactNode } from "react";
 
 const NumberInput = ({
   value,

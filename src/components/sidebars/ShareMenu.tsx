@@ -1,4 +1,4 @@
-import { User } from "@prisma/client";
+import type { User } from "@prisma/client";
 import { useState } from "react";
 import { IoClose } from "react-icons/io5";
 import { deleteInvitation, shareRoom } from "~/app/actions/rooms";
