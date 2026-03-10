@@ -48,6 +48,14 @@ function createTextTexture(gl: any, text: any, font = 'bold 30px monospace', col
 }
 
 class Title {
+    gl: any;
+    plane: any;
+    renderer: any;
+    text: any;
+    textColor: string;
+    font: string;
+    mesh: any;
+
     constructor({ gl, plane, renderer, text, textColor = '#545050', font = '30px sans-serif' }: any) {
         autoBind(this);
         this.gl = gl;
@@ -97,6 +105,33 @@ class Title {
 }
 
 class Media {
+    extra: number;
+    geometry: any;
+    gl: any;
+    image: any;
+    index: number;
+    length: number;
+    renderer: any;
+    scene: any;
+    screen: any;
+    text: any;
+    viewport: any;
+    bend: number;
+    textColor: any;
+    borderRadius: number;
+    font: any;
+    program: any;
+    plane: any;
+    title: any;
+    scale: number;
+    padding: number;
+    width: number;
+    widthTotal: number;
+    x: number;
+    speed: number;
+    isBefore: boolean;
+    isAfter: boolean;
+
     constructor({
         geometry,
         gl,
@@ -296,6 +331,33 @@ class Media {
 }
 
 class App {
+    container: any;
+    scrollSpeed: number;
+    scroll: any;
+    onCheckDebounce: any;
+    onItemClick: any;
+    renderer: any;
+    gl: any;
+    camera: any;
+    scene: any;
+    screen: any;
+    viewport: any;
+    planeGeometry: any;
+    mediasImages: any[];
+    medias: any[];
+    isDown: boolean;
+    start: number;
+    startY: number;
+    clickStart: number;
+    raycast: any;
+    mouse: any;
+    raf: number;
+    boundOnResize: any;
+    boundOnWheel: any;
+    boundOnTouchDown: any;
+    boundOnTouchMove: any;
+    boundOnTouchUp: any;
+
     constructor(
         container: any,
         {
